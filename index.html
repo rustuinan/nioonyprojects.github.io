@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="TODO Game Studio mobil oyunları, gizlilik politikaları ve iletişim bilgileri."
+    >
+    <title>TODO Game Studio</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">
+      <span data-i18n="tr">İçeriğe geç</span>
+      <span data-i18n="en">Skip to content</span>
+    </a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="TODO Game Studio home">
+          <span class="brand-mark" aria-hidden="true">TG</span>
+          <span>TODO Game Studio</span>
+        </a>
+
+        <div class="nav-actions">
+          <a href="#games" data-i18n="tr">Oyunlarımız</a>
+          <a href="#games" data-i18n="en">Games</a>
+          <a href="#contact" data-i18n="tr">İletişim</a>
+          <a href="#contact" data-i18n="en">Contact</a>
+          <a href="privacy-policy.html" data-i18n="tr">Gizlilik</a>
+          <a href="privacy-policy.html" data-i18n="en">Privacy</a>
+          <div class="language-switch" aria-label="Language selector">
+            <button type="button" class="lang-button" data-lang-button="tr" aria-pressed="true">TR</button>
+            <button type="button" class="lang-button" data-lang-button="en" aria-pressed="false">EN</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="hero section">
+        <div class="hero-content">
+          <p class="eyebrow" data-i18n="tr">Bağımsız mobil oyun stüdyosu</p>
+          <p class="eyebrow" data-i18n="en">Independent mobile game studio</p>
+          <h1>TODO Game Studio</h1>
+          <p class="lead" data-i18n="tr">
+            Kısa molalara, hızlı eğlenceye ve temiz deneyimlere odaklanan mobil oyunlar geliştiriyoruz.
+          </p>
+          <p class="lead" data-i18n="en">
+            We build mobile games focused on short breaks, fast fun, and clean player experiences.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#games" data-i18n="tr">Oyunları gör</a>
+            <a class="button primary" href="#games" data-i18n="en">View games</a>
+            <a class="button secondary" href="privacy-policy.html" data-i18n="tr">Privacy Policy</a>
+            <a class="button secondary" href="privacy-policy.html" data-i18n="en">Privacy Policy</a>
+          </div>
+        </div>
+
+        <div class="studio-visual" aria-hidden="true">
+          <div class="device-frame">
+            <div class="pixel-sky">
+              <span class="pixel coin coin-one"></span>
+              <span class="pixel coin coin-two"></span>
+              <span class="pixel block block-one"></span>
+              <span class="pixel block block-two"></span>
+              <span class="pixel player"></span>
+              <span class="pixel platform platform-one"></span>
+              <span class="pixel platform platform-two"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="games" class="section split-section">
+        <div>
+          <p class="eyebrow" data-i18n="tr">Oyunlarımız</p>
+          <p class="eyebrow" data-i18n="en">Our games</p>
+          <h2 data-i18n="tr">Google Play için yayın bilgileri hazır bir oyun vitrini.</h2>
+          <h2 data-i18n="en">A simple game showcase ready for Google Play publishing details.</h2>
+        </div>
+
+        <div class="game-grid" aria-label="Game list">
+          <article class="game-card">
+            <div class="game-icon icon-cyan" aria-hidden="true"></div>
+            <div>
+              <h3>TODO Game 1</h3>
+              <p data-i18n="tr">TODO: Oyunun kısa açıklaması, Google Play bağlantısı ve destek bilgisi.</p>
+              <p data-i18n="en">TODO: Short game description, Google Play link, and support details.</p>
+            </div>
+          </article>
+
+          <article class="game-card">
+            <div class="game-icon icon-lime" aria-hidden="true"></div>
+            <div>
+              <h3>TODO Game 2</h3>
+              <p data-i18n="tr">TODO: Yayınlandığında oyun adı, yaş grubu ve mağaza bağlantısı ekleyin.</p>
+              <p data-i18n="en">TODO: Add the game name, age rating, and store link after release.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div>
+          <p class="eyebrow" data-i18n="tr">İletişim</p>
+          <p class="eyebrow" data-i18n="en">Contact</p>
+          <h2 data-i18n="tr">Destek ve gizlilik talepleri için bize ulaşın.</h2>
+          <h2 data-i18n="en">Reach us for support and privacy requests.</h2>
+        </div>
+        <div class="contact-panel">
+          <p data-i18n="tr">Geliştirici iletişim e-postası</p>
+          <p data-i18n="en">Developer contact email</p>
+          <a href="mailto:TODO@example.com">TODO@example.com</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year">2026</span> TODO Game Studio</p>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </footer>
+
+    <script>
+      const root = document.documentElement;
+      const year = document.getElementById('year');
+      const buttons = document.querySelectorAll('[data-lang-button]');
+      const savedLanguage = localStorage.getItem('site-language');
+      const initialLanguage = savedLanguage || (navigator.language.startsWith('tr') ? 'tr' : 'en');
+
+      function setLanguage(language) {
+        root.lang = language;
+        root.dataset.language = language;
+        localStorage.setItem('site-language', language);
+        buttons.forEach((button) => {
+          const active = button.dataset.langButton === language;
+          button.classList.toggle('is-active', active);
+          button.setAttribute('aria-pressed', String(active));
+        });
+      }
+
+      year.textContent = new Date().getFullYear();
+      buttons.forEach((button) => {
+        button.addEventListener('click', () => setLanguage(button.dataset.langButton));
+      });
+      setLanguage(initialLanguage);
+    </script>
+  </body>
+</html>
