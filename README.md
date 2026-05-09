@@ -1,6 +1,6 @@
 # Nioony Projects Website
 
-Nioony Projects için hazırlanmış sade, hızlı ve statik web sitesi. Site mobil oyunlar, mobil uygulamalar, küçük dijital ürünler ve Google Play için herkese açık Privacy Policy sayfası sunmak üzere plain HTML, CSS ve küçük bir inline JavaScript ile oluşturulmuştur.
+Nioony Projects için hazırlanmış sade, hızlı ve statik web sitesi. Site mobil oyunlar, mobil uygulamalar, küçük dijital ürünler ve Google Play için herkese açık Privacy Policy sayfası sunmak üzere plain HTML, CSS, küçük bir inline JavaScript ve Three.js tabanlı hero sahnesiyle oluşturulmuştur.
 
 ## Dosyalar
 
@@ -8,6 +8,8 @@ Nioony Projects için hazırlanmış sade, hızlı ve statik web sitesi. Site mo
 - `privacy-policy.html`: Google Play için kullanılabilir gizlilik politikası sayfası.
 - `styles.css`: Mobil uyumlu, bağımlılıksız site stilleri.
 - `CNAME`: GitHub Pages custom domain ayarı (`nioonyprojects.com`).
+
+Three.js CDN üzerinden sabit sürümle yüklenir; projede npm kurulumu veya build adımı gerekmez.
 
 ## Yayın Bilgileri
 
