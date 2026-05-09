@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="TODO Game Studio mobil oyunları, gizlilik politikaları ve iletişim bilgileri."
+      content="Nioony Projects mobil oyunlar, uygulamalar ve küçük dijital ürünler geliştiren bağımsız bir stüdyodur."
     >
-    <title>TODO Game Studio</title>
+    <title>Nioony Projects</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -18,14 +18,16 @@
 
     <header class="site-header">
       <nav class="nav" aria-label="Main navigation">
-        <a class="brand" href="index.html" aria-label="TODO Game Studio home">
-          <span class="brand-mark" aria-hidden="true">TG</span>
-          <span>TODO Game Studio</span>
+        <a class="brand" href="index.html" aria-label="Nioony Projects home">
+          <span class="brand-mark" aria-hidden="true">NP</span>
+          <span>Nioony Projects</span>
         </a>
 
         <div class="nav-actions">
-          <a href="#games" data-i18n="tr">Oyunlarımız</a>
-          <a href="#games" data-i18n="en">Games</a>
+          <a href="#projects" data-i18n="tr">Projeler</a>
+          <a href="#projects" data-i18n="en">Projects</a>
+          <a href="#about" data-i18n="tr">Hakkımızda</a>
+          <a href="#about" data-i18n="en">About</a>
           <a href="#contact" data-i18n="tr">İletişim</a>
           <a href="#contact" data-i18n="en">Contact</a>
           <a href="privacy-policy.html" data-i18n="tr">Gizlilik</a>
@@ -41,64 +43,117 @@
     <main id="main-content">
       <section class="hero section">
         <div class="hero-content">
-          <p class="eyebrow" data-i18n="tr">Bağımsız mobil oyun stüdyosu</p>
-          <p class="eyebrow" data-i18n="en">Independent mobile game studio</p>
-          <h1>TODO Game Studio</h1>
+          <p class="eyebrow" data-i18n="tr">Bağımsız mobil ürün stüdyosu</p>
+          <p class="eyebrow" data-i18n="en">Independent mobile product studio</p>
+          <h1>Nioony Projects</h1>
           <p class="lead" data-i18n="tr">
-            Kısa molalara, hızlı eğlenceye ve temiz deneyimlere odaklanan mobil oyunlar geliştiriyoruz.
+            Mobil oyunlar, kullanışlı uygulamalar ve küçük dijital deneyimler geliştiriyoruz.
+            Amacımız hızlı açılan, sade çalışan ve kullanıcıya net değer veren ürünler üretmek.
           </p>
           <p class="lead" data-i18n="en">
-            We build mobile games focused on short breaks, fast fun, and clean player experiences.
+            We build mobile games, useful apps, and small digital experiences.
+            Our goal is to ship products that open fast, feel clear, and bring real value to users.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#games" data-i18n="tr">Oyunları gör</a>
-            <a class="button primary" href="#games" data-i18n="en">View games</a>
-            <a class="button secondary" href="privacy-policy.html" data-i18n="tr">Privacy Policy</a>
-            <a class="button secondary" href="privacy-policy.html" data-i18n="en">Privacy Policy</a>
+            <a class="button primary" href="#projects" data-i18n="tr">Projeleri gör</a>
+            <a class="button primary" href="#projects" data-i18n="en">View projects</a>
+            <a class="button secondary" href="privacy-policy.html">Privacy Policy</a>
           </div>
         </div>
 
         <div class="studio-visual" aria-hidden="true">
-          <div class="device-frame">
-            <div class="pixel-sky">
-              <span class="pixel coin coin-one"></span>
-              <span class="pixel coin coin-two"></span>
-              <span class="pixel block block-one"></span>
-              <span class="pixel block block-two"></span>
-              <span class="pixel player"></span>
-              <span class="pixel platform platform-one"></span>
-              <span class="pixel platform platform-two"></span>
+          <div class="product-board">
+            <div class="phone-preview">
+              <div class="phone-bar"></div>
+              <div class="app-tile tile-game"></div>
+              <div class="app-tile tile-app"></div>
+              <div class="app-tile tile-tool"></div>
+              <div class="phone-row wide"></div>
+              <div class="phone-row short"></div>
+            </div>
+            <div class="floating-card card-one">
+              <span></span>
+              <strong>Games</strong>
+            </div>
+            <div class="floating-card card-two">
+              <span></span>
+              <strong>Apps</strong>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="games" class="section split-section">
+      <section id="projects" class="section split-section">
         <div>
-          <p class="eyebrow" data-i18n="tr">Oyunlarımız</p>
-          <p class="eyebrow" data-i18n="en">Our games</p>
-          <h2 data-i18n="tr">Google Play için yayın bilgileri hazır bir oyun vitrini.</h2>
-          <h2 data-i18n="en">A simple game showcase ready for Google Play publishing details.</h2>
+          <p class="eyebrow" data-i18n="tr">Projeler</p>
+          <p class="eyebrow" data-i18n="en">Projects</p>
+          <h2 data-i18n="tr">Oyunlardan araçlara, mobil odaklı küçük ama özenli ürünler.</h2>
+          <h2 data-i18n="en">From games to tools, small but carefully built mobile-first products.</h2>
         </div>
 
-        <div class="game-grid" aria-label="Game list">
-          <article class="game-card">
-            <div class="game-icon icon-cyan" aria-hidden="true"></div>
-            <div>
-              <h3>TODO Game 1</h3>
-              <p data-i18n="tr">TODO: Oyunun kısa açıklaması, Google Play bağlantısı ve destek bilgisi.</p>
-              <p data-i18n="en">TODO: Short game description, Google Play link, and support details.</p>
-            </div>
+        <div class="project-grid" aria-label="Project categories">
+          <article class="project-card accent-cyan">
+            <div class="project-icon" aria-hidden="true"></div>
+            <h3 data-i18n="tr">Mobil Oyunlar</h3>
+            <h3 data-i18n="en">Mobile Games</h3>
+            <p data-i18n="tr">
+              Kısa oturumlara uygun, anlaşılır mekaniklere sahip, eğlenceli mobil oyunlar geliştiriyoruz.
+            </p>
+            <p data-i18n="en">
+              We create mobile games with clear mechanics, short sessions, and a playful feel.
+            </p>
           </article>
 
-          <article class="game-card">
-            <div class="game-icon icon-lime" aria-hidden="true"></div>
-            <div>
-              <h3>TODO Game 2</h3>
-              <p data-i18n="tr">TODO: Yayınlandığında oyun adı, yaş grubu ve mağaza bağlantısı ekleyin.</p>
-              <p data-i18n="en">TODO: Add the game name, age rating, and store link after release.</p>
-            </div>
+          <article class="project-card accent-green">
+            <div class="project-icon" aria-hidden="true"></div>
+            <h3 data-i18n="tr">Mobil Uygulamalar</h3>
+            <h3 data-i18n="en">Mobile Apps</h3>
+            <p data-i18n="tr">
+              Günlük işleri kolaylaştıran, sade arayüzlü ve hızlı çalışan mobil uygulamalar tasarlıyoruz.
+            </p>
+            <p data-i18n="en">
+              We design clean, fast mobile apps that make everyday tasks easier.
+            </p>
           </article>
+
+          <article class="project-card accent-amber">
+            <div class="project-icon" aria-hidden="true"></div>
+            <h3 data-i18n="tr">Deneysel Ürünler</h3>
+            <h3 data-i18n="en">Experimental Products</h3>
+            <p data-i18n="tr">
+              Yeni fikirleri küçük prototiplerle test ediyor, işe yarayanları gerçek ürünlere dönüştürüyoruz.
+            </p>
+            <p data-i18n="en">
+              We test new ideas through focused prototypes and turn useful ones into real products.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="section about-section">
+        <div>
+          <p class="eyebrow" data-i18n="tr">Hakkımızda</p>
+          <p class="eyebrow" data-i18n="en">About</p>
+          <h2 data-i18n="tr">Nioony Projects, tek bir kategoriye sıkışmayan bağımsız bir üretim alanı.</h2>
+          <h2 data-i18n="en">Nioony Projects is an independent build space that is not limited to one category.</h2>
+        </div>
+        <div class="about-copy">
+          <p data-i18n="tr">
+            Oyun geliştirme bizim önemli alanlarımızdan biri, ama yalnızca oyunlarla sınırlı kalmak istemiyoruz.
+            Mobil uygulamalar, yardımcı araçlar ve yeni ürün fikirleri üzerinde çalışıyoruz.
+          </p>
+          <p data-i18n="en">
+            Game development is one of our core areas, but we do not want to be limited to games only.
+            We also work on mobile apps, utility tools, and new product ideas.
+          </p>
+          <ul class="value-list">
+            <li data-i18n="tr">Mobil öncelikli tasarım</li>
+            <li data-i18n="en">Mobile-first design</li>
+            <li data-i18n="tr">Sade ve hızlı kullanıcı deneyimi</li>
+            <li data-i18n="en">Simple and fast user experience</li>
+            <li data-i18n="tr">Google Play için şeffaf destek ve gizlilik bilgileri</li>
+            <li data-i18n="en">Transparent support and privacy information for Google Play</li>
+          </ul>
         </div>
       </section>
 
@@ -106,19 +161,20 @@
         <div>
           <p class="eyebrow" data-i18n="tr">İletişim</p>
           <p class="eyebrow" data-i18n="en">Contact</p>
-          <h2 data-i18n="tr">Destek ve gizlilik talepleri için bize ulaşın.</h2>
-          <h2 data-i18n="en">Reach us for support and privacy requests.</h2>
+          <h2 data-i18n="tr">Destek, iş birliği ve gizlilik talepleri için bize ulaşın.</h2>
+          <h2 data-i18n="en">Reach us for support, collaboration, and privacy requests.</h2>
         </div>
         <div class="contact-panel">
           <p data-i18n="tr">Geliştirici iletişim e-postası</p>
           <p data-i18n="en">Developer contact email</p>
-          <a href="mailto:TODO@example.com">TODO@example.com</a>
+          <a href="mailto:contact@nioonyprojects.com">contact@nioonyprojects.com</a>
+          <span>nioonyprojects.com</span>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© <span id="year">2026</span> TODO Game Studio</p>
+      <p>© <span id="year">2026</span> Nioony Projects</p>
       <a href="privacy-policy.html">Privacy Policy</a>
     </footer>
 

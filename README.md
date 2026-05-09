@@ -1,30 +1,25 @@
-# TODO Game Studio Website
+# Nioony Projects Website
 
-Basit, hızlı ve statik mini game studio sitesi. Google Play için herkese açık bir Privacy Policy URL'si yayınlamak üzere plain HTML, CSS ve küçük bir inline JavaScript ile hazırlanmıştır.
+Nioony Projects için hazırlanmış sade, hızlı ve statik web sitesi. Site mobil oyunlar, mobil uygulamalar, küçük dijital ürünler ve Google Play için herkese açık Privacy Policy sayfası sunmak üzere plain HTML, CSS ve küçük bir inline JavaScript ile oluşturulmuştur.
 
 ## Dosyalar
 
-- `index.html`: Türkçe/İngilizce ana sayfa, oyun listesi ve iletişim alanı.
-- `privacy-policy.html`: Google Play için başlıklandırılmış gizlilik politikası şablonu.
-- `styles.css`: Mobil uyumlu, sade ve profesyonel site stilleri.
-- `README.md`: Kurulum, düzenleme ve deploy notları.
+- `index.html`: Türkçe/İngilizce ana sayfa, proje kategorileri, hakkımızda ve iletişim alanı.
+- `privacy-policy.html`: Google Play için kullanılabilir gizlilik politikası sayfası.
+- `styles.css`: Mobil uyumlu, bağımlılıksız site stilleri.
+- `CNAME`: GitHub Pages custom domain ayarı (`nioonyprojects.com`).
 
-## Yayın Öncesi TODO Listesi
+## Yayın Bilgileri
 
-- `TODO Game Studio` adını gerçek stüdyo adıyla değiştirin.
-- `TODO App Name` alanlarını gerçek uygulama adıyla değiştirin.
-- `TODO@example.com` alanlarını Google Play Console'daki geliştirici iletişim e-postasıyla değiştirin.
-- Privacy Policy içindeki veri toplama, reklam, analiz, crash reporting ve üçüncü taraf SDK alanlarını uygulamanızın gerçek davranışına göre doldurun.
-- `Last updated` tarihini güncelleyin.
-- Google Play Console'daki Data safety beyanları ile bu sayfadaki açıklamaların tutarlı olduğundan emin olun.
+- Site domaini: `https://nioonyprojects.com`
+- Privacy Policy URL: `https://nioonyprojects.com/privacy-policy.html`
+- Geliştirici iletişim e-postası: `contact@nioonyprojects.com`
 
-## Google Play Privacy Policy Notu
-
-Google Play için gizlilik politikası URL'si public, aktif, tarayıcıda açılabilen ve PDF olmayan bir web sayfası olmalıdır. Bu repo içindeki `privacy-policy.html` dosyasını GitHub Pages, Vercel veya benzeri bir statik hosting servisiyle yayınlayıp oluşan URL'yi Google Play Console'a ekleyebilirsiniz.
+Google Play için gizlilik politikası URL'si public, aktif, tarayıcıda açılabilen ve PDF olmayan bir web sayfası olmalıdır. Bu repodaki `privacy-policy.html` sayfası bu amaçla yayınlanabilir.
 
 ## Lokal Önizleme
 
-Bu site statik olduğu için doğrudan `index.html` dosyasını tarayıcıda açabilirsiniz. İsterseniz basit bir lokal sunucu da kullanabilirsiniz:
+Bu site statik olduğu için doğrudan `index.html` dosyasını tarayıcıda açabilirsiniz. Lokal sunucu ile kontrol etmek için:
 
 ```bash
 python3 -m http.server 8000
@@ -37,17 +32,13 @@ Sonra şu adresleri açın:
 
 ## GitHub Pages Deploy
 
-1. Bu repoyu GitHub'a push edin.
+1. Değişiklikleri `main` branch'ine push edin.
 2. GitHub repo sayfasında `Settings` bölümüne girin.
 3. `Pages` menüsünü açın.
 4. `Build and deployment` altında `Source` olarak `Deploy from a branch` seçin.
-5. Branch olarak `main`, klasör olarak `/root` seçin ve kaydedin.
-6. Yayın tamamlandığında GitHub Pages URL'niz oluşur.
-7. Google Play Console'da Privacy Policy URL alanına şu formatta yayınlanan sayfayı girin:
-
-```text
-https://YOUR_USERNAME.github.io/YOUR_REPOSITORY/privacy-policy.html
-```
+5. Branch olarak `main`, klasör olarak `/root` seçin.
+6. Custom domain alanının `nioonyprojects.com` olduğundan emin olun.
+7. DNS kontrolü başarılı olduktan sonra `Enforce HTTPS` seçeneğini açın.
 
 ## Vercel Deploy
 
@@ -57,11 +48,7 @@ https://YOUR_USERNAME.github.io/YOUR_REPOSITORY/privacy-policy.html
 4. Build command alanını boş bırakın.
 5. Output directory alanını boş bırakın veya proje kökü olarak bırakın.
 6. `Deploy` butonuna basın.
-7. Yayınlanan alan adında Privacy Policy URL şu formatta olur:
-
-```text
-https://YOUR_PROJECT.vercel.app/privacy-policy.html
-```
+7. Custom domain olarak `nioonyprojects.com` ekleyin.
 
 ## Dil Desteği
 
