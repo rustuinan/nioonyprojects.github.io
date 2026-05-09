@@ -23,7 +23,8 @@ export const copy = {
       description:
         'Mobil oyunlar, kullanışlı uygulamalar ve küçük dijital deneyimler geliştiriyoruz. Amacımız hızlı açılan, sade çalışan ve kullanıcıya net değer veren ürünler üretmek.',
       primary: 'Projelerimizi keşfet',
-      secondary: 'Hakkımızda'
+      secondary: 'Hakkımızda',
+      scrollHint: 'Aşağıda projeler ve ürün detayları var'
     },
     stats: [
       ['10+', 'Oyun'],
@@ -103,7 +104,8 @@ export const copy = {
       description:
         'We build mobile games, useful apps, and small digital experiences. Our goal is to ship products that open fast, feel simple, and create clear value for users.',
       primary: 'Explore our projects',
-      secondary: 'About us'
+      secondary: 'About us',
+      scrollHint: 'Projects and product details continue below'
     },
     stats: [
       ['10+', 'Games'],

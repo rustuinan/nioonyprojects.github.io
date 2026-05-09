@@ -2,8 +2,7 @@
 
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
+import { motion } from 'framer-motion';
 import { useLanguage } from '@/components/LanguageProvider';
 
 const ThreeHeroScene = dynamic(() => import('@/components/ThreeHeroScene').then((mod) => mod.ThreeHeroScene), {
@@ -13,13 +12,10 @@ const ThreeHeroScene = dynamic(() => import('@/components/ThreeHeroScene').then(
 
 export function Hero() {
   const { t } = useLanguage();
-  const ref = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] });
-  const y = useTransform(scrollYProgress, [0, 1], [0, 46]);
 
   return (
-    <section ref={ref} id="home" className="container-shell relative grid min-h-[calc(100svh-5rem)] items-center gap-12 py-16 lg:grid-cols-[0.92fr_1.08fr] lg:py-24">
-      <div className="relative z-10">
+    <section id="home" className="container-shell relative grid min-h-[calc(100svh-5rem)] items-center gap-10 pb-20 pt-14 sm:gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:pb-24 lg:pt-20">
+      <div className="relative z-10 pb-3">
         <motion.p
           className="mb-5 inline-flex rounded-full border border-teal-300/20 bg-teal-300/10 px-4 py-2 text-sm font-bold uppercase tracking-[0.22em] text-teal-200"
           initial={{ opacity: 0, y: 12 }}
@@ -63,9 +59,27 @@ export function Hero() {
             {t.hero.secondary}
           </Link>
         </motion.div>
+        <motion.a
+          href="#projects"
+          aria-label={t.hero.scrollHint}
+          className="mt-7 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.06] px-4 py-2 text-xs font-bold text-slate-300 shadow-2xl shadow-black/20 backdrop-blur-md transition hover:border-teal-300/35 hover:text-white focus:outline-none focus:ring-4 focus:ring-teal-300/20"
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.65, delay: 0.32 }}
+        >
+          <span className="relative flex h-7 w-4 items-start justify-center rounded-full border border-teal-200/40 p-1">
+            <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-teal-200" />
+          </span>
+          {t.hero.scrollHint}
+        </motion.a>
       </div>
 
-      <motion.div style={{ y }} className="relative min-h-[420px] sm:min-h-[560px]">
+      <motion.div
+        className="relative min-h-[440px] sm:min-h-[590px]"
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.22 }}
+      >
         <ThreeHeroScene />
       </motion.div>
     </section>

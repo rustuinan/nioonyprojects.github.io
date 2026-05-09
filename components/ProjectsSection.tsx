@@ -77,14 +77,44 @@ function ProjectCard({
         <h3 className="text-xl font-black text-white">{project.name}</h3>
         <p className="mt-3 min-h-16 text-sm leading-6 text-slate-400">{description}</p>
         <div className="mt-5 flex gap-2">
-          <a href="#" aria-label={`${project.name} ${playLabel}`} className="grid min-h-11 min-w-11 place-items-center rounded-full border border-white/10 bg-white/5 text-xs font-black text-slate-200 transition hover:bg-white/10">
-            GP
-          </a>
-          <a href="#" aria-label={`${project.name} ${appStoreLabel}`} className="grid min-h-11 min-w-11 place-items-center rounded-full border border-white/10 bg-white/5 text-xs font-black text-slate-200 transition hover:bg-white/10">
-            AS
-          </a>
+          <StoreButton href="#" label={`${project.name} ${playLabel}`} icon="play" text="Google Play" />
+          <StoreButton href="#" label={`${project.name} ${appStoreLabel}`} icon="apple" text="App Store" />
         </div>
       </div>
     </motion.article>
+  );
+}
+
+function StoreButton({ href, label, icon, text }: { href: string; label: string; icon: 'play' | 'apple'; text: string }) {
+  return (
+    <a
+      href={href}
+      aria-label={label}
+      className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 text-xs font-black text-slate-100 transition hover:-translate-y-0.5 hover:border-teal-300/35 hover:bg-white/10 focus:outline-none focus:ring-4 focus:ring-teal-300/20"
+    >
+      {icon === 'play' ? <GooglePlayIcon /> : <AppStoreIcon />}
+      <span className="hidden min-[420px]:inline sm:hidden lg:inline">{text}</span>
+    </a>
+  );
+}
+
+function GooglePlayIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5 shrink-0">
+      <path d="M5.2 3.4c-.32.18-.52.54-.52 1.04v15.12c0 .5.2.86.52 1.04l8.2-8.61L5.2 3.4Z" fill="#38bdf8" />
+      <path d="m14.08 11.28 2.36-2.48-8.82-5.05c-.78-.45-1.42-.5-1.9-.28l8.36 7.81Z" fill="#34d399" />
+      <path d="m14.08 12.72-8.36 7.81c.48.22 1.12.17 1.9-.28l8.82-5.05-2.36-2.48Z" fill="#fbbf24" />
+      <path d="m15.02 12 2.62 2.75 1.04-.6c1.18-.67 1.18-1.63 0-2.3l-1.04-.6L15.02 12Z" fill="#fb7185" />
+    </svg>
+  );
+}
+
+function AppStoreIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5 shrink-0">
+      <rect width="24" height="24" rx="7" fill="#2563eb" />
+      <path d="M8 16.9h8M10.2 15.1l3.3-5.7M13.8 15.1l-3.3-5.7" stroke="white" strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M12 7.65v-.9" stroke="white" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
   );
 }

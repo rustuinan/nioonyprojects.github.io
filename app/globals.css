@@ -28,7 +28,7 @@ body {
     radial-gradient(circle at 78% 18%, rgba(56, 189, 248, 0.14), transparent 30rem),
     linear-gradient(180deg, #050914 0%, #07111f 48%, #050914 100%);
   color: var(--foreground);
-  font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 body::selection {
