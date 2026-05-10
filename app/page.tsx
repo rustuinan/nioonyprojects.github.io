@@ -3,13 +3,17 @@ import { ContactSection } from '@/components/ContactSection';
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
+import { ParticleCursor } from '@/components/ParticleCursor';
 import { ProjectsSection } from '@/components/ProjectsSection';
 import { ServicesSection } from '@/components/ServicesSection';
+import { ScrollProgress } from '@/components/ScrollProgress';
 import { Stats } from '@/components/Stats';
 
 export default function HomePage() {
   return (
     <>
+      <ScrollProgress />
+      <ParticleCursor />
       <Header />
       <main>
         <Hero />

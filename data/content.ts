@@ -1,7 +1,8 @@
 export type Language = 'tr' | 'en';
 
 export const navItems = [
-  { href: '/', key: 'home' },
+  { href: '/#home', key: 'home' },
+  { href: '/#services', key: 'services' },
   { href: '/#projects', key: 'projects' },
   { href: '/#about', key: 'about' },
   { href: '/#contact', key: 'contact' },
@@ -12,6 +13,7 @@ export const copy = {
   tr: {
     nav: {
       home: 'Ana sayfa',
+      services: 'Hizmetler',
       projects: 'Projeler',
       about: 'Hakkımızda',
       contact: 'İletişim',
@@ -23,7 +25,7 @@ export const copy = {
       description:
         'Mobil oyunlar, kullanışlı uygulamalar ve küçük dijital deneyimler geliştiriyoruz. Amacımız hızlı açılan, sade çalışan ve kullanıcıya net değer veren ürünler üretmek.',
       primary: 'Projelerimizi keşfet',
-      secondary: 'Hakkımızda',
+      secondary: "Studio'yu tanı",
       scrollHint: 'Aşağıda projeler ve ürün detayları var'
     },
     stats: [
@@ -33,8 +35,8 @@ export const copy = {
       ['1M+', 'İndirme']
     ],
     projects: {
-      eyebrow: 'Projeler',
-      title: 'Üzerinde çalıştığımız projelerden bazıları',
+      eyebrow: 'Öne çıkan işler',
+      title: 'Oynanan, sevilen, indirilen işler',
       filters: ['Tümü', 'Oyunlar', 'Uygulamalar', 'Deneysel'],
       storeLabels: {
         play: 'Google Play bağlantısı',
@@ -43,7 +45,7 @@ export const copy = {
     },
     services: {
       eyebrow: 'Neler yapıyoruz',
-      title: 'Mobil odaklı ürünleri küçük ama güçlü sistemlerle geliştiriyoruz.',
+      title: 'Fikrinizi üretime dönüştürüyoruz.',
       cards: [
         ['Mobil Oyunlar', 'Eğlenceli, akıcı ve kısa oturumlara uygun oyun deneyimleri tasarlıyoruz.'],
         ['Mobil Uygulamalar', 'Günlük işleri kolaylaştıran, hızlı ve sade uygulamalar geliştiriyoruz.'],
@@ -52,14 +54,14 @@ export const copy = {
     },
     about: {
       eyebrow: 'Hakkımızda',
-      title: 'Nioony Projects, bağımsız bir teknoloji stüdyosudur.',
+      title: 'Küçük bir ekip, büyük hayaller peşinde.',
       description:
         'Oyun geliştirme, mobil uygulamalar ve yeni teknolojiler konusunda tutkulu küçük bir ekibiz. Amacımız, kullanıcıların gerçekten değer katan ürünler deneyimlemesini sağlamak.',
       values: ['Kullanıcı odaklı tasarım', 'Temiz ve optimize edilmiş kod', 'Sürekli geliştirme ve destek']
     },
     contact: {
       eyebrow: 'İletişim',
-      title: 'Fikirlerinizi duymak bizi mutlu eder.',
+      title: 'Bir sonraki hit projeyi birlikte yapalım.',
       description: 'Proje teklifleri, iş birlikleri, destek ve gizlilik talepleri için bizimle iletişime geçebilirsiniz.',
       emailLabel: 'E-posta',
       websiteLabel: 'Web sitesi'
@@ -93,6 +95,7 @@ export const copy = {
   en: {
     nav: {
       home: 'Home',
+      services: 'Services',
       projects: 'Projects',
       about: 'About',
       contact: 'Contact',
@@ -104,7 +107,7 @@ export const copy = {
       description:
         'We build mobile games, useful apps, and small digital experiences. Our goal is to ship products that open fast, feel simple, and create clear value for users.',
       primary: 'Explore our projects',
-      secondary: 'About us',
+      secondary: 'Meet the studio',
       scrollHint: 'Projects and product details continue below'
     },
     stats: [
@@ -114,8 +117,8 @@ export const copy = {
       ['1M+', 'Downloads']
     ],
     projects: {
-      eyebrow: 'Projects',
-      title: 'Some of the projects we are working on',
+      eyebrow: 'Featured work',
+      title: 'Played, loved, downloaded products',
       filters: ['All', 'Games', 'Apps', 'Experimental'],
       storeLabels: {
         play: 'Google Play link',
@@ -124,7 +127,7 @@ export const copy = {
     },
     services: {
       eyebrow: 'What we do',
-      title: 'We build mobile-first products with small but thoughtful systems.',
+      title: 'We turn ideas into shipped products.',
       cards: [
         ['Mobile Games', 'We design smooth, playful game experiences made for short sessions.'],
         ['Mobile Apps', 'We develop fast and simple apps that make everyday tasks easier.'],
@@ -133,14 +136,14 @@ export const copy = {
     },
     about: {
       eyebrow: 'About',
-      title: 'Nioony Projects is an independent technology studio.',
+      title: 'A small team chasing big dreams.',
       description:
         'We are a small team passionate about game development, mobile apps, and new technologies. Our goal is to help users experience products that bring real value.',
       values: ['User-focused design', 'Clean and optimized code', 'Continuous improvement and support']
     },
     contact: {
       eyebrow: 'Contact',
-      title: 'We are happy to hear your ideas.',
+      title: 'Let’s build the next hit project together.',
       description: 'Contact us for project proposals, collaborations, support, and privacy requests.',
       emailLabel: 'Email',
       websiteLabel: 'Website'
@@ -181,7 +184,8 @@ export const projects = [
     categoryEn: 'Game',
     descriptionTr: 'Birleştir, yükselt ve renkli dünyaları keşfet.',
     descriptionEn: 'Merge, upgrade, and discover colorful worlds.',
-    color: 'from-emerald-400 to-cyan-400'
+    color: 'from-emerald-400 to-cyan-400',
+    image: '/assets/game-cosmic.jpg'
   },
   {
     name: 'Focus Daily',
@@ -190,7 +194,8 @@ export const projects = [
     categoryEn: 'App',
     descriptionTr: 'Günlük odaklanma ve küçük görev takibi için sade bir mobil uygulama.',
     descriptionEn: 'A simple mobile app for daily focus and small task tracking.',
-    color: 'from-teal-300 to-emerald-400'
+    color: 'from-teal-300 to-emerald-400',
+    image: '/assets/game-blocks.jpg'
   },
   {
     name: 'Color Cube',
@@ -199,7 +204,8 @@ export const projects = [
     categoryEn: 'Game',
     descriptionTr: 'Renkli bulmacalar ve kısa oturumlara uygun eğlenceli deneyim.',
     descriptionEn: 'Colorful puzzles and a fun experience built for short sessions.',
-    color: 'from-cyan-300 to-blue-500'
+    color: 'from-cyan-300 to-blue-500',
+    image: '/assets/game-racer.jpg'
   },
   {
     name: 'Pocket Notes',
@@ -208,7 +214,8 @@ export const projects = [
     categoryEn: 'App',
     descriptionTr: 'Hızlı not almak için minimal ve kullanışlı mobil not uygulaması.',
     descriptionEn: 'A minimal and useful mobile notes app for quick capture.',
-    color: 'from-amber-300 to-rose-400'
+    color: 'from-amber-300 to-rose-400',
+    image: '/assets/game-quest.jpg'
   },
   {
     name: 'Tiny Lab',
@@ -217,6 +224,7 @@ export const projects = [
     categoryEn: 'Experimental',
     descriptionTr: 'Küçük fikirleri hızlı prototiplerle test ettiğimiz deneysel ürün alanı.',
     descriptionEn: 'An experimental product space where small ideas are tested through fast prototypes.',
-    color: 'from-violet-300 to-teal-300'
+    color: 'from-violet-300 to-teal-300',
+    image: '/assets/game-cosmic.jpg'
   }
 ] as const;
