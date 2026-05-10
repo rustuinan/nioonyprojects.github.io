@@ -15,9 +15,9 @@ export function ServicesSection() {
   ] as const;
 
   return (
-    <section id="services" className="relative py-28">
+    <section id="services" className="relative scroll-mt-28 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-6">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="max-w-2xl">
+        <motion.div className="max-w-2xl">
           <span className="text-sm font-semibold uppercase tracking-[0.2em] text-secondary">{t.services.eyebrow}</span>
           <h2 className="mt-3 font-display text-4xl font-bold sm:text-5xl">
             {language === 'tr' ? (
@@ -39,10 +39,6 @@ export function ServicesSection() {
           {cards.map(([title, desc], index) => (
             <motion.article
               key={title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.08 }}
               whileHover={{ y: -6 }}
               className="glass shadow-card group relative overflow-hidden rounded-3xl p-6"
             >

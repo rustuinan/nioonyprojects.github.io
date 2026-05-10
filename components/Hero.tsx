@@ -2,7 +2,6 @@
 
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import { useLanguage } from '@/components/LanguageProvider';
 
 const ThreeHeroScene = dynamic(() => import('@/components/ThreeHeroScene').then((mod) => mod.ThreeHeroScene), {
@@ -19,20 +18,20 @@ export function Hero() {
       : ['Mobile products', 'begin with', 'imagination.'];
 
   return (
-    <section id="home" className="relative isolate min-h-screen overflow-hidden pb-24 pt-32">
+    <section id="home" className="relative isolate min-h-[100svh] scroll-mt-28 overflow-hidden pb-16 pt-28 sm:pb-24 sm:pt-32">
       <div className="absolute inset-0 -z-10">
         <ThreeHeroScene className="h-full w-full" />
       </div>
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-background/30 via-background/10 to-background" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-background/70 via-background/25 to-background sm:from-background/30 sm:via-background/10" />
 
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:grid-cols-2 lg:items-center">
-        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: 'easeOut' }}>
-          <span className="glass inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium text-foreground/80">
+      <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:items-center">
+        <div>
+          <span className="glass inline-flex max-w-full items-center gap-2 rounded-full px-4 py-1.5 text-[11px] font-medium text-foreground/80 sm:text-xs">
             <span className="h-2 w-2 animate-pulse rounded-full bg-accent" />
-            {t.hero.eyebrow}
+            <span className="truncate">{t.hero.eyebrow}</span>
           </span>
 
-          <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] text-white sm:text-6xl lg:text-7xl">
+          <h1 className="mt-6 max-w-[11ch] font-display text-[2.75rem] font-bold leading-[1.04] text-white min-[380px]:text-5xl sm:max-w-none sm:text-6xl lg:text-7xl">
             {heroTitle[0]}
             <br />
             <span className="text-gradient">{heroTitle[1]}</span>
@@ -40,35 +39,35 @@ export function Hero() {
             {heroTitle[2]}
           </h1>
 
-          <p className="mt-6 max-w-xl text-lg leading-8 text-muted-foreground">{t.hero.description}</p>
+          <p className="mt-6 max-w-xl text-base leading-7 text-foreground/85 sm:text-lg sm:leading-8">{t.hero.description}</p>
 
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="#projects" className="group bg-aurora shadow-glow-magenta inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-semibold text-white transition-transform hover:scale-[1.03] focus:outline-none focus:ring-4 focus:ring-primary/30">
+          <div className="mt-8 grid gap-3 min-[440px]:flex min-[440px]:flex-wrap">
+            <Link href="#projects" className="group bg-aurora shadow-glow-magenta inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 py-3.5 font-semibold text-white transition-transform hover:scale-[1.03] focus:outline-none focus:ring-4 focus:ring-primary/30">
               {t.hero.primary}
               <ArrowRightIcon />
             </Link>
-            <Link href="#about" className="glass inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-semibold text-foreground transition-colors hover:bg-white/15 focus:outline-none focus:ring-4 focus:ring-white/20">
+            <Link href="#about" className="glass inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 py-3.5 font-semibold text-foreground transition-colors hover:bg-white/15 focus:outline-none focus:ring-4 focus:ring-white/20">
               <PlayIcon />
               {t.hero.secondary}
             </Link>
           </div>
 
-          <a href="#services" aria-label={t.hero.scrollHint} className="glass mt-7 inline-flex items-center gap-3 rounded-full px-4 py-2 text-xs font-bold text-foreground/75 transition hover:bg-white/15 hover:text-foreground">
+          <a href="#services" aria-label={t.hero.scrollHint} className="glass mt-7 inline-flex max-w-full items-center gap-3 rounded-full px-4 py-2 text-xs font-bold text-foreground/75 transition hover:bg-white/15 hover:text-foreground">
             <span className="relative flex h-7 w-4 items-start justify-center rounded-full border border-secondary/45 p-1">
               <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-secondary" />
             </span>
-            {t.hero.scrollHint}
+            <span className="truncate">{t.hero.scrollHint}</span>
           </a>
 
-          <div className="mt-12 grid max-w-md grid-cols-3 gap-6">
+          <div className="mt-10 grid max-w-md grid-cols-3 gap-3 sm:mt-12 sm:gap-6">
             {t.stats.slice(0, 3).map(([value, label]) => (
               <div key={label}>
-                <div className="font-display text-3xl font-bold text-gradient">{value}</div>
+                <div className="font-display text-2xl font-bold text-gradient sm:text-3xl">{value}</div>
                 <div className="mt-1 text-xs text-muted-foreground">{label}</div>
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         <div className="hidden lg:block" />
       </div>

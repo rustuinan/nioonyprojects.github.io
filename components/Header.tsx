@@ -12,8 +12,8 @@ export function Header({ compact = false }: { compact?: boolean }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed left-1/2 top-4 z-50 w-[min(1200px,92%)] -translate-x-1/2">
-      <div className={`glass flex items-center justify-between rounded-full px-5 py-3 shadow-card ${compact ? 'bg-background/70' : ''}`}>
+    <header className="fixed left-1/2 top-3 z-50 w-[min(1200px,94%)] -translate-x-1/2 sm:top-4 sm:w-[min(1200px,92%)]">
+      <div className={`glass flex items-center justify-between rounded-full px-3 py-2.5 shadow-card sm:px-5 sm:py-3 ${compact ? 'bg-background/70' : ''}`}>
         <Link href="/#home" aria-label="Nioony Projects home" className="shrink-0">
           <Logo />
         </Link>
@@ -39,7 +39,7 @@ export function Header({ compact = false }: { compact?: boolean }) {
 
         <button
           type="button"
-          className="grid min-h-11 min-w-11 place-items-center rounded-full text-white transition hover:bg-white/10 lg:hidden"
+          className="grid min-h-11 min-w-11 shrink-0 place-items-center rounded-full text-white transition hover:bg-white/10 lg:hidden"
           aria-label="Menu"
           aria-expanded={open}
           onClick={() => setOpen((value) => !value)}
@@ -53,7 +53,7 @@ export function Header({ compact = false }: { compact?: boolean }) {
       </div>
 
       {open ? (
-        <div className="glass mt-2 rounded-3xl p-4 lg:hidden">
+        <div className="glass mt-2 max-h-[calc(100svh-6rem)] overflow-y-auto rounded-3xl p-4 lg:hidden">
           <div className="flex flex-col gap-1">
             {navItems.map((item) => (
               <Link

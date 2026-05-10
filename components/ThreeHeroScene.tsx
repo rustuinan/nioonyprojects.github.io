@@ -222,11 +222,11 @@ function CanvasPixelProbe() {
 function MobileCosmicFallback({ className }: { className: string }) {
   return (
     <div className={`scene-fallback-grid relative overflow-hidden ${className}`}>
-      <div className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet/70 blur-3xl" />
-      <div className="absolute left-[18%] top-[32%] h-20 w-20 rounded-full bg-magenta shadow-glow-magenta" />
-      <div className="absolute right-[18%] top-[26%] h-14 w-14 rotate-45 rounded-2xl bg-cyan shadow-glow-cyan" />
-      <div className="absolute bottom-[28%] left-[30%] h-16 w-16 rounded-full bg-sun shadow-glow-cyan" />
-      <div className="absolute bottom-[20%] right-[26%] h-20 w-20 rotate-12 rounded-3xl bg-violet shadow-glow-magenta" />
+      <div className="absolute left-[72%] top-[22%] h-64 w-64 -translate-x-1/2 rounded-full bg-violet/45 blur-3xl" />
+      <div className="absolute right-[-1rem] top-[28%] h-14 w-14 rounded-full bg-cyan/85 shadow-glow-cyan" />
+      <div className="absolute left-[10%] bottom-[22%] h-16 w-16 rounded-full bg-sun/75 shadow-glow-cyan" />
+      <div className="absolute right-[14%] bottom-[12%] h-20 w-20 rotate-12 rounded-3xl bg-violet/70 shadow-glow-magenta" />
+      <div className="absolute left-[68%] top-[44%] h-16 w-16 rotate-45 rounded-2xl bg-magenta/55 blur-[1px]" />
     </div>
   );
 }

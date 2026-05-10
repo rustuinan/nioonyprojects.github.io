@@ -1,19 +1,32 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import type { FormEvent } from 'react';
 import { useLanguage } from '@/components/LanguageProvider';
+import { SocialLinks } from '@/components/SocialLinks';
 
 export function ContactSection() {
   const { language, t } = useLanguage();
 
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const name = String(formData.get('name') || '').trim();
+    const email = String(formData.get('email') || '').trim();
+    const message = String(formData.get('message') || '').trim();
+    const subject = encodeURIComponent(`Nioony Projects - ${language === 'tr' ? 'Yeni mesaj' : 'New message'}`);
+    const body = encodeURIComponent(`${language === 'tr' ? 'Ad' : 'Name'}: ${name}\nEmail: ${email}\n\n${message}`);
+    window.location.href = `mailto:contact@nioonyprojects.com?subject=${subject}&body=${body}`;
+  };
+
   return (
-    <section id="contact" className="relative py-28">
-      <div className="mx-auto max-w-5xl px-6">
-        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="glass shadow-card relative overflow-hidden rounded-[3rem] p-10 sm:p-16">
+    <section id="contact" className="relative scroll-mt-28 py-20 sm:py-28">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6">
+        <motion.div className="glass shadow-card relative overflow-hidden rounded-[2rem] p-5 sm:rounded-[3rem] sm:p-16">
           <div className="bg-aurora pointer-events-none absolute -top-32 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full opacity-30 blur-3xl" />
           <div className="text-center">
             <span className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">{t.contact.eyebrow}</span>
-            <h2 className="mt-3 font-display text-4xl font-bold sm:text-5xl">
+            <h2 className="mt-3 font-display text-3xl font-bold sm:text-5xl">
               {language === 'tr' ? (
                 <>
                   Bir sonraki <span className="text-gradient">hit projeyi</span> birlikte yapalım
@@ -27,12 +40,12 @@ export function ContactSection() {
             <p className="mx-auto mt-4 max-w-xl text-muted-foreground">{t.contact.description}</p>
           </div>
 
-          <form onSubmit={(event) => event.preventDefault()} className="mx-auto mt-10 grid max-w-2xl gap-4">
+          <form onSubmit={handleSubmit} className="mx-auto mt-10 grid max-w-2xl gap-4">
             <div className="grid gap-4 sm:grid-cols-2">
-              <input required placeholder={language === 'tr' ? 'Adınız' : 'Your name'} className="glass rounded-2xl px-5 py-4 text-sm outline-none focus:ring-2 focus:ring-primary" />
-              <input required type="email" placeholder={language === 'tr' ? 'E-posta' : 'Email'} className="glass rounded-2xl px-5 py-4 text-sm outline-none focus:ring-2 focus:ring-primary" />
+              <input name="name" autoComplete="name" required placeholder={language === 'tr' ? 'Adınız' : 'Your name'} className="glass min-h-12 rounded-2xl px-5 py-4 text-base outline-none focus:ring-2 focus:ring-primary sm:text-sm" />
+              <input name="email" autoComplete="email" required type="email" placeholder={language === 'tr' ? 'E-posta' : 'Email'} className="glass min-h-12 rounded-2xl px-5 py-4 text-base outline-none focus:ring-2 focus:ring-primary sm:text-sm" />
             </div>
-            <textarea required rows={4} placeholder={language === 'tr' ? 'Projenizden bahsedin...' : 'Tell us about your project...'} className="glass resize-none rounded-2xl px-5 py-4 text-sm outline-none focus:ring-2 focus:ring-primary" />
+            <textarea name="message" required rows={4} placeholder={language === 'tr' ? 'Projenizden bahsedin...' : 'Tell us about your project...'} className="glass resize-none rounded-2xl px-5 py-4 text-base outline-none focus:ring-2 focus:ring-primary sm:text-sm" />
             <button type="submit" className="group bg-aurora shadow-glow-magenta inline-flex items-center justify-center gap-2 rounded-full px-6 py-4 font-semibold text-white transition-transform hover:scale-[1.02]">
               {language === 'tr' ? 'Mesajı Gönder' : 'Send Message'} <SendIcon />
             </button>
@@ -47,6 +60,11 @@ export function ContactSection() {
               <MapIcon />
               <span>nioonyprojects.com</span>
             </a>
+          </div>
+
+          <div className="mt-8 text-center">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-foreground/55">{language === 'tr' ? 'Sosyal medya' : 'Social media'}</p>
+            <SocialLinks />
           </div>
         </motion.div>
       </div>

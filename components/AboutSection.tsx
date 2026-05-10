@@ -15,9 +15,9 @@ export function AboutSection() {
   ];
 
   return (
-    <section id="about" className="relative py-28">
+    <section id="about" className="relative scroll-mt-28 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-6">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mx-auto max-w-3xl text-center">
+        <motion.div className="mx-auto max-w-3xl text-center">
           <span className="glass inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-foreground">
             <SparkleIcon /> {t.about.eyebrow}
           </span>
@@ -39,10 +39,6 @@ export function AboutSection() {
           {stats.map(([value, label], index) => (
             <motion.article
               key={label}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.08 }}
               whileHover={{ y: -4 }}
               className="glass shadow-card group relative overflow-hidden rounded-3xl p-6"
             >
@@ -57,7 +53,7 @@ export function AboutSection() {
         </div>
 
         <div className="mt-20 grid gap-10 lg:grid-cols-5 lg:items-center">
-          <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="lg:col-span-2">
+          <motion.div className="lg:col-span-2">
             <div className="relative">
               <div className="glass shadow-card relative overflow-hidden rounded-[2.5rem] p-8">
                 <div className="bg-cosmic absolute inset-0 opacity-90" />
@@ -91,7 +87,7 @@ export function AboutSection() {
             </div>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="lg:col-span-3">
+          <motion.div className="lg:col-span-3">
             <h3 className="font-display text-3xl font-bold sm:text-4xl">
               {language === 'tr' ? (
                 <>
@@ -108,10 +104,6 @@ export function AboutSection() {
               {t.about.values.map((value, index) => (
                 <motion.div
                   key={value}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="glass shadow-card group flex items-start gap-4 rounded-2xl p-5"
                 >
                   <span className="mt-1 h-3 w-3 shrink-0 rounded-full" style={{ background: statColors[index], boxShadow: `0 0 20px ${statColors[index]}` }} />

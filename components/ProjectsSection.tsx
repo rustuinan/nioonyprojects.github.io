@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { useLanguage } from '@/components/LanguageProvider';
@@ -7,13 +8,13 @@ import { projects } from '@/data/content';
 
 export function ProjectsSection() {
   const { language, t } = useLanguage();
-  const featured = projects.slice(0, 4);
+  const visibleProjects = projects.slice(0, 4);
 
   return (
-    <section id="projects" className="relative py-28">
+    <section id="projects" className="relative scroll-mt-28 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-2xl">
+          <motion.div className="max-w-2xl">
             <span className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">{t.projects.eyebrow}</span>
             <h2 className="mt-3 font-display text-4xl font-bold sm:text-5xl">
               {language === 'tr' ? (
@@ -27,13 +28,19 @@ export function ProjectsSection() {
               )}
             </h2>
           </motion.div>
-          <a href="#contact" className="glass inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium hover:bg-white/15">
-            {language === 'tr' ? 'Proje konuşalım' : 'Start a project'} <ArrowUpRightIcon />
-          </a>
+          <div className="flex flex-wrap gap-2">
+            <Link href="/projects/" className="glass inline-flex min-h-11 items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium hover:bg-white/15">
+              {language === 'tr' ? 'Tümünü gör' : 'View all'}
+              <ArrowUpRightIcon />
+            </Link>
+            <a href="#contact" className="glass inline-flex min-h-11 items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium hover:bg-white/15">
+              {language === 'tr' ? 'Proje konuşalım' : 'Start a project'} <ArrowUpRightIcon />
+            </a>
+          </div>
         </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4" style={{ perspective: 1000 }}>
-          {featured.map((project, index) => (
+          {visibleProjects.map((project, index) => (
             <ProjectCard key={project.name} project={project} index={index} language={language} />
           ))}
         </div>
@@ -42,7 +49,7 @@ export function ProjectsSection() {
   );
 }
 
-function ProjectCard({ project, index, language }: { project: (typeof projects)[number]; index: number; language: 'tr' | 'en' }) {
+export function ProjectCard({ project, index, language }: { project: (typeof projects)[number]; index: number; language: 'tr' | 'en' }) {
   const ref = useRef<HTMLDivElement>(null);
   const mx = useMotionValue(0);
   const my = useMotionValue(0);
@@ -70,10 +77,6 @@ function ProjectCard({ project, index, language }: { project: (typeof projects)[
       onMouseMove={handleMove}
       onMouseLeave={reset}
       style={{ rotateX: rx, rotateY: ry, transformPerspective: 800 }}
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.06 }}
       className="group relative block overflow-hidden rounded-3xl shadow-card will-change-transform"
     >
       <div className="aspect-[4/5] overflow-hidden">
