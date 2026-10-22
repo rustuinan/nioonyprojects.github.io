@@ -14,29 +14,28 @@ export const copy = {
     nav: {
       home: 'Ana sayfa',
       services: 'Hizmetler',
-      projects: 'Projeler',
+      projects: 'Oyunlarımız',
       about: 'Hakkımızda',
       contact: 'İletişim',
       privacy: 'Gizlilik'
     },
     hero: {
-      eyebrow: 'Minik fikirler, büyük deneyimler',
+      eyebrow: 'Nioony Projects · Bağımsız oyun stüdyosu',
       title: 'Nioony Projects',
       description:
-        'Mobil oyunlar, kullanışlı uygulamalar ve küçük dijital deneyimler geliştiriyoruz. Amacımız hızlı açılan, sade çalışan ve kullanıcıya net değer veren ürünler üretmek.',
-      primary: 'Projelerimizi keşfet',
-      secondary: "Studio'yu tanı",
-      scrollHint: 'Aşağıda projeler ve ürün detayları var'
+        'RingMatch ile renkleri eşleştir, Shikaku ile her kareyi çöz, Tet2048 ile bir sonraki hamleni planla. Kısa bir molayı keyifli bir bulmaca deneyimine dönüştüren mobil oyunlar geliştiriyoruz.',
+      primary: 'Oyunlarımızı keşfet',
+      secondary: 'Google Play’de bizi bul',
+      scrollHint: 'Oyunları keşfet'
     },
     stats: [
-      ['10+', 'Oyun'],
-      ['6+', 'Uygulama'],
-      ['15+', 'Deneysel Proje'],
-      ['1M+', 'İndirme']
+      ['3', 'Oyun'],
+      ['2', 'Google Play’de yayında'],
+      ['1', 'İncelemede']
     ],
     projects: {
-      eyebrow: 'Öne çıkan işler',
-      title: 'Oynanan, sevilen, indirilen işler',
+      eyebrow: 'Oyunlarımız',
+      title: 'Her oyunda yeni bir hamle.',
       filters: ['Tümü', 'Oyunlar', 'Uygulamalar', 'Deneysel'],
       storeLabels: {
         play: 'Google Play bağlantısı',
@@ -45,30 +44,30 @@ export const copy = {
     },
     services: {
       eyebrow: 'Neler yapıyoruz',
-      title: 'Fikrinizi üretime dönüştürüyoruz.',
+      title: 'Bir hamleden fazlası.',
       cards: [
-        ['Mobil Oyunlar', 'Eğlenceli, akıcı ve kısa oturumlara uygun oyun deneyimleri tasarlıyoruz.'],
-        ['Mobil Uygulamalar', 'Günlük işleri kolaylaştıran, hızlı ve sade uygulamalar geliştiriyoruz.'],
-        ['Deneysel Ürünler', 'Yeni fikirleri küçük prototiplerle test ediyor, işe yarayanları gerçek ürünlere dönüştürüyoruz.']
+        ['Renk ve ritim', 'RingMatch’te halkaları yerleştir, aynı renkleri hizala ve eşleşmeler oluştur.'],
+        ['Mantık ve keşif', 'Shikaku’da sayılardan yola çıkarak ızgarayı dikdörtgenlere ayır.'],
+        ['Sayılar ve strateji', 'Tet2048’de blokları bırak, eşit sayıları birleştir ve daha büyük değerlere ulaş.']
       ]
     },
     about: {
       eyebrow: 'Hakkımızda',
-      title: 'Küçük bir ekip, büyük hayaller peşinde.',
+      title: 'Oynaması kolay. Ustalaşması keyifli.',
       description:
-        'Oyun geliştirme, mobil uygulamalar ve yeni teknolojiler konusunda tutkulu küçük bir ekibiz. Amacımız, kullanıcıların gerçekten değer katan ürünler deneyimlemesini sağlamak.',
-      values: ['Kullanıcı odaklı tasarım', 'Temiz ve optimize edilmiş kod', 'Sürekli geliştirme ve destek']
+        'Nioony Projects olarak renk, mantık ve sayı bulmacalarına odaklanıyoruz. RingMatch, Shikaku ve Tet2048’i anlaşılır kurallar, dikkatle tasarlanmış görseller ve tekrar oynamaya davet eden mekaniklerle geliştiriyoruz.',
+      values: ['Anlaşılır oyun mekanikleri', 'Özenli görsel tasarım', 'Oyuncu geri bildirimleriyle gelişim']
     },
     contact: {
       eyebrow: 'İletişim',
-      title: 'Bir sonraki hit projeyi birlikte yapalım.',
-      description: 'Proje teklifleri, iş birlikleri, destek ve gizlilik talepleri için bizimle iletişime geçebilirsiniz.',
+      title: 'Bir fikrin, sorun ya da önerin mi var?',
+      description: 'Oyunlarımızla ilgili geri bildirim, destek ve iş birliği taleplerini bize ilet. Yeni oyunlar ve güncellemeler için sosyal hesaplarımızı takip et.',
       emailLabel: 'E-posta',
       websiteLabel: 'Web sitesi'
     },
     footer: {
       rights: 'Tüm hakları saklıdır.',
-      social: 'Sosyal medya yakında'
+      social: 'Bizi takip et'
     },
     privacy: {
       eyebrow: 'Gizlilik',
@@ -96,29 +95,28 @@ export const copy = {
     nav: {
       home: 'Home',
       services: 'Services',
-      projects: 'Projects',
+      projects: 'Our games',
       about: 'About',
       contact: 'Contact',
       privacy: 'Privacy'
     },
     hero: {
-      eyebrow: 'Small ideas, meaningful experiences',
+      eyebrow: 'Nioony Projects · Independent game studio',
       title: 'Nioony Projects',
       description:
-        'We build mobile games, useful apps, and small digital experiences. Our goal is to ship products that open fast, feel simple, and create clear value for users.',
-      primary: 'Explore our projects',
-      secondary: 'Meet the studio',
-      scrollHint: 'Projects and product details continue below'
+        'Match colors in RingMatch, solve every square in Shikaku, and plan your next move in Tet2048. We build mobile games that turn a short break into a satisfying puzzle.',
+      primary: 'Explore our games',
+      secondary: 'Find us on Google Play',
+      scrollHint: 'Discover our games'
     },
     stats: [
-      ['10+', 'Games'],
-      ['6+', 'Apps'],
-      ['15+', 'Experimental Projects'],
-      ['1M+', 'Downloads']
+      ['3', 'Games'],
+      ['2', 'Available on Google Play'],
+      ['1', 'Under review']
     ],
     projects: {
-      eyebrow: 'Featured work',
-      title: 'Played, loved, downloaded products',
+      eyebrow: 'Our games',
+      title: 'A new move in every game.',
       filters: ['All', 'Games', 'Apps', 'Experimental'],
       storeLabels: {
         play: 'Google Play link',
@@ -127,30 +125,30 @@ export const copy = {
     },
     services: {
       eyebrow: 'What we do',
-      title: 'We turn ideas into shipped products.',
+      title: 'More than a single move.',
       cards: [
-        ['Mobile Games', 'We design smooth, playful game experiences made for short sessions.'],
-        ['Mobile Apps', 'We develop fast and simple apps that make everyday tasks easier.'],
-        ['Experimental Products', 'We test new ideas through focused prototypes and turn useful ones into real products.']
+        ['Color and rhythm', 'Place rings, align matching colors, and create matches in RingMatch.'],
+        ['Logic and discovery', 'Use the numbers to divide the grid into rectangles in Shikaku.'],
+        ['Numbers and strategy', 'Drop blocks, merge equal numbers, and reach higher values in Tet2048.']
       ]
     },
     about: {
       eyebrow: 'About',
-      title: 'A small team chasing big dreams.',
+      title: 'Easy to learn. A pleasure to master.',
       description:
-        'We are a small team passionate about game development, mobile apps, and new technologies. Our goal is to help users experience products that bring real value.',
-      values: ['User-focused design', 'Clean and optimized code', 'Continuous improvement and support']
+        'At Nioony Projects, we focus on color, logic, and number puzzles. We build RingMatch, Shikaku, and Tet2048 around clear rules, carefully crafted visuals, and mechanics that invite another round.',
+      values: ['Clear game mechanics', 'Thoughtful visual design', 'Improvement through player feedback']
     },
     contact: {
       eyebrow: 'Contact',
-      title: 'Let’s build the next hit project together.',
-      description: 'Contact us for project proposals, collaborations, support, and privacy requests.',
+      title: 'An idea, a question, or a suggestion?',
+      description: 'Get in touch for game feedback, support, or collaborations. Follow our social channels for new games and updates.',
       emailLabel: 'Email',
       websiteLabel: 'Website'
     },
     footer: {
       rights: 'All rights reserved.',
-      social: 'Social links coming soon'
+      social: 'Follow us'
     },
     privacy: {
       eyebrow: 'Privacy',
@@ -178,53 +176,39 @@ export const copy = {
 
 export const projects = [
   {
-    name: 'Merge Adventure',
+    name: 'RingMatch',
     category: 'games',
     categoryTr: 'Oyun',
     categoryEn: 'Game',
-    descriptionTr: 'Birleştir, yükselt ve renkli dünyaları keşfet.',
-    descriptionEn: 'Merge, upgrade, and discover colorful worlds.',
+    descriptionTr: 'Halkaları yerleştir, aynı renkleri hizala ve neon bulmacanın ritmini yakala.',
+    descriptionEn: 'Place rings, line up matching colors, and find your rhythm in a neon puzzle.',
     color: 'from-emerald-400 to-cyan-400',
-    image: '/assets/game-cosmic.jpg'
+    image: '/assets/ringmatch-banner.png',
+    icon: '/assets/ringmatch-icon.jpg',
+    playUrl: 'https://play.google.com/store/apps/details?id=com.nioonyprojects.ringmatch'
   },
   {
-    name: 'Focus Daily',
-    category: 'apps',
-    categoryTr: 'Uygulama',
-    categoryEn: 'App',
-    descriptionTr: 'Günlük odaklanma ve küçük görev takibi için sade bir mobil uygulama.',
-    descriptionEn: 'A simple mobile app for daily focus and small task tracking.',
-    color: 'from-teal-300 to-emerald-400',
-    image: '/assets/game-blocks.jpg'
-  },
-  {
-    name: 'Color Cube',
+    name: 'Shikaku',
     category: 'games',
     categoryTr: 'Oyun',
     categoryEn: 'Game',
-    descriptionTr: 'Renkli bulmacalar ve kısa oturumlara uygun eğlenceli deneyim.',
-    descriptionEn: 'Colorful puzzles and a fun experience built for short sessions.',
+    descriptionTr: 'Sayıları ipucu olarak kullan, ızgarayı dikdörtgenlere ayır ve tropik bir mantık molası ver.',
+    descriptionEn: 'Follow the number clues, divide the grid into rectangles, and take a tropical puzzle break.',
+    color: 'from-teal-300 to-emerald-400',
+    image: '/assets/shikaku-banner.png',
+    icon: '/assets/shikaku-icon.png',
+    playUrl: 'https://play.google.com/store/apps/details?id=com.nioonyprojects.shikaku'
+  },
+  {
+    name: 'Tet2048',
+    category: 'games',
+    categoryTr: 'Oyun',
+    categoryEn: 'Game',
+    descriptionTr: 'Blokları bırak, eşit sayıları birleştir ve 2048’e giden yolu planla. Google Play incelemesinde.',
+    descriptionEn: 'Drop blocks, merge equal numbers, and plan your path to 2048. Under Google Play review.',
     color: 'from-cyan-300 to-blue-500',
-    image: '/assets/game-racer.jpg'
-  },
-  {
-    name: 'Pocket Notes',
-    category: 'apps',
-    categoryTr: 'Uygulama',
-    categoryEn: 'App',
-    descriptionTr: 'Hızlı not almak için minimal ve kullanışlı mobil not uygulaması.',
-    descriptionEn: 'A minimal and useful mobile notes app for quick capture.',
-    color: 'from-amber-300 to-rose-400',
-    image: '/assets/game-quest.jpg'
-  },
-  {
-    name: 'Tiny Lab',
-    category: 'experimental',
-    categoryTr: 'Deneysel',
-    categoryEn: 'Experimental',
-    descriptionTr: 'Küçük fikirleri hızlı prototiplerle test ettiğimiz deneysel ürün alanı.',
-    descriptionEn: 'An experimental product space where small ideas are tested through fast prototypes.',
-    color: 'from-violet-300 to-teal-300',
-    image: '/assets/game-cosmic.jpg'
+    image: '/assets/tet2048-banner.png',
+    icon: '/assets/tet2048-icon.png',
+    playUrl: null
   }
 ] as const;

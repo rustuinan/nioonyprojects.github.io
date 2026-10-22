@@ -7,12 +7,7 @@ const statColors = ['var(--magenta)', 'var(--cyan)', 'var(--sun)', 'var(--violet
 
 export function AboutSection() {
   const { language, t } = useLanguage();
-  const stats = [
-    [language === 'tr' ? '40+' : '40+', language === 'tr' ? 'Yayında proje' : 'Shipped projects'],
-    [language === 'tr' ? '8M+' : '8M+', language === 'tr' ? 'Toplam indirme' : 'Total downloads'],
-    [language === 'tr' ? '12+' : '12+', language === 'tr' ? 'Yıllık deneyim' : 'Years experience'],
-    ['100%', language === 'tr' ? 'Tutku' : 'Passion']
-  ];
+  const stats = t.stats;
 
   return (
     <section id="about" className="relative scroll-mt-28 py-20 sm:py-28">
@@ -22,20 +17,12 @@ export function AboutSection() {
             <SparkleIcon /> {t.about.eyebrow}
           </span>
           <h2 className="mt-5 font-display text-4xl font-bold leading-tight sm:text-5xl">
-            {language === 'tr' ? (
-              <>
-                Küçük bir ekip, <span className="text-gradient">büyük hayaller</span> peşinde
-              </>
-            ) : (
-              <>
-                A small team chasing <span className="text-gradient">big dreams</span>
-              </>
-            )}
+            {t.about.title}
           </h2>
           <p className="mt-5 text-lg leading-8 text-foreground/80">{t.about.description}</p>
         </motion.div>
 
-        <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid gap-4 sm:grid-cols-3">
           {stats.map(([value, label], index) => (
             <motion.article
               key={label}
@@ -64,17 +51,17 @@ export function AboutSection() {
                     </span>
                     <div>
                       <div className="font-display text-2xl font-bold text-white">Nioony</div>
-                      <div className="text-xs uppercase tracking-widest text-white/70">est. 2026</div>
+                      <div className="text-xs uppercase tracking-widest text-white/70">Independent games</div>
                     </div>
                   </div>
                   <div>
                     <div className="font-display text-3xl font-bold leading-tight text-white">
-                      {language === 'tr' ? '"Oyun, en saf haliyle bir hikayedir."' : '"Play is a story in its purest form."'}
+                      {language === 'tr' ? 'Bir mola. Bir bulmaca. Bir hamle daha.' : 'One break. One puzzle. One more move.'}
                     </div>
                     <div className="mt-3 text-sm text-white/80">- Nioony Projects</div>
                   </div>
                   <div className="mt-auto grid grid-cols-3 gap-2 text-center">
-                    {['Unity', 'Flutter', 'React'].map((item) => (
+                    {['RingMatch', 'Shikaku', 'Tet2048'].map((item) => (
                       <div key={item} className="rounded-xl bg-white/15 py-2 text-xs font-semibold text-white backdrop-blur">
                         {item}
                       </div>
@@ -99,7 +86,7 @@ export function AboutSection() {
                 </>
               )}
             </h3>
-            <p className="mt-3 text-foreground/75">{language === 'tr' ? 'İşimize aşığız ve bunu her ürettiğimiz detayda hissettirmek istiyoruz.' : 'We care deeply about the craft and show it in every detail we ship.'}</p>
+            <p className="mt-3 text-foreground/75">{language === 'tr' ? 'İlk hamleden son bulmacaya kadar oyuncunun deneyimine odaklanıyoruz.' : 'We focus on the player’s experience, from the first move to the last puzzle.'}</p>
             <div className="mt-8 space-y-4">
               {t.about.values.map((value, index) => (
                 <motion.div

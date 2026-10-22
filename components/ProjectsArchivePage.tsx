@@ -24,12 +24,12 @@ export function ProjectsArchivePage() {
         </h1>
         <p className="mt-5 text-base leading-7 text-muted-foreground sm:text-lg">
           {language === 'tr'
-            ? 'Mobil oyunlar, uygulamalar ve deneysel ürünler için büyüyen proje listemiz.'
-            : 'A growing list of mobile games, apps, and experimental digital products.'}
+            ? 'RingMatch, Shikaku ve Tet2048: renk, mantık ve sayı bulmacalarını keşfet.'
+            : 'Discover RingMatch, Shikaku, and Tet2048: color, logic, and number puzzles.'}
         </p>
       </div>
 
-      <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4" style={{ perspective: 1000 }}>
+      <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3" style={{ perspective: 1000 }}>
         {projects.map((project, index) => (
           <ProjectCard key={project.name} project={project} index={index} language={language} />
         ))}

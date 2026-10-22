@@ -27,15 +27,7 @@ export function ContactSection() {
           <div className="text-center">
             <span className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">{t.contact.eyebrow}</span>
             <h2 className="mt-3 font-display text-3xl font-bold sm:text-5xl">
-              {language === 'tr' ? (
-                <>
-                  Bir sonraki <span className="text-gradient">hit projeyi</span> birlikte yapalım
-                </>
-              ) : (
-                <>
-                  Let’s build the next <span className="text-gradient">hit project</span> together
-                </>
-              )}
+              {t.contact.title}
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-muted-foreground">{t.contact.description}</p>
           </div>
@@ -45,7 +37,7 @@ export function ContactSection() {
               <input name="name" autoComplete="name" required placeholder={language === 'tr' ? 'Adınız' : 'Your name'} className="glass min-h-12 rounded-2xl px-5 py-4 text-base outline-none focus:ring-2 focus:ring-primary sm:text-sm" />
               <input name="email" autoComplete="email" required type="email" placeholder={language === 'tr' ? 'E-posta' : 'Email'} className="glass min-h-12 rounded-2xl px-5 py-4 text-base outline-none focus:ring-2 focus:ring-primary sm:text-sm" />
             </div>
-            <textarea name="message" required rows={4} placeholder={language === 'tr' ? 'Projenizden bahsedin...' : 'Tell us about your project...'} className="glass resize-none rounded-2xl px-5 py-4 text-base outline-none focus:ring-2 focus:ring-primary sm:text-sm" />
+            <textarea name="message" required rows={4} placeholder={language === 'tr' ? 'Mesajınızı yazın...' : 'Write your message...'} className="glass resize-none rounded-2xl px-5 py-4 text-base outline-none focus:ring-2 focus:ring-primary sm:text-sm" />
             <button type="submit" className="group bg-aurora shadow-glow-magenta inline-flex items-center justify-center gap-2 rounded-full px-6 py-4 font-semibold text-white transition-transform hover:scale-[1.02]">
               {language === 'tr' ? 'Mesajı Gönder' : 'Send Message'} <SendIcon />
             </button>

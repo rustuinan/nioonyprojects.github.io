@@ -10,8 +10,8 @@ export function ServicesSection() {
   const cards = [
     ...t.services.cards,
     language === 'tr'
-      ? ['Yayın Sonrası Destek', 'Güncelleme, analiz, iyileştirme ve kullanıcı geri bildirimlerini düzenli takip ediyoruz.']
-      : ['Live Operations', 'We support updates, analytics, improvements, and user feedback after launch.']
+      ? ['Birlikte geliştirelim', 'Bir önerin veya karşılaştığın bir sorun mu var? Geri bildirimlerini bizimle paylaş.']
+      : ['Help shape our games', 'Have a suggestion or found an issue? Share your feedback with us.']
   ] as const;
 
   return (
@@ -20,18 +20,10 @@ export function ServicesSection() {
         <motion.div className="max-w-2xl">
           <span className="text-sm font-semibold uppercase tracking-[0.2em] text-secondary">{t.services.eyebrow}</span>
           <h2 className="mt-3 font-display text-4xl font-bold sm:text-5xl">
-            {language === 'tr' ? (
-              <>
-                Fikrinizi <span className="text-gradient">üretime</span> dönüştürüyoruz
-              </>
-            ) : (
-              <>
-                We turn ideas into <span className="text-gradient">shipped</span> products
-              </>
-            )}
+            {t.services.title}
           </h2>
           <p className="mt-4 text-muted-foreground">
-            {language === 'tr' ? 'Konsept aşamasından yayına kadar tüm süreci tek bir yaratıcı ekiple yönetin.' : 'Move from concept to launch with one focused creative team.'}
+            {language === 'tr' ? 'Renkleri eşleştir, mantığını kullan veya sayıları büyüt. Bir sonraki bulmacanı seç.' : 'Match colors, use your logic, or grow your numbers. Choose your next puzzle.'}
           </p>
         </motion.div>
 

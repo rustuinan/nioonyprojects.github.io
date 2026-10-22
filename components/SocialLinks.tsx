@@ -1,8 +1,7 @@
 const socialLinks = [
-  { label: 'YouTube', href: '#', icon: YouTubeIcon },
-  { label: 'X', href: '#', icon: XIcon },
-  { label: 'Instagram', href: '#', icon: InstagramIcon },
-  { label: 'LinkedIn', href: '#', icon: LinkedInIcon }
+  { label: 'YouTube', href: 'https://www.youtube.com/@NioonyProjects', icon: YouTubeIcon },
+  { label: 'X', href: 'https://x.com/nioonyprojects', icon: XIcon },
+  { label: 'Instagram', href: 'https://www.instagram.com/nioonyprojects/', icon: InstagramIcon }
 ] as const;
 
 export function SocialLinks({ compact = false }: { compact?: boolean }) {
@@ -14,6 +13,8 @@ export function SocialLinks({ compact = false }: { compact?: boolean }) {
           <a
             key={item.label}
             href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label={item.label}
             className={`glass grid place-items-center rounded-full text-foreground transition hover:-translate-y-0.5 hover:bg-white/15 focus:outline-none focus:ring-4 focus:ring-primary/25 ${
               compact ? 'h-10 w-10' : 'h-12 w-12'

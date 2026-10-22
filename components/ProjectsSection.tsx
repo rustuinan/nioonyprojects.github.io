@@ -17,15 +17,7 @@ export function ProjectsSection() {
           <motion.div className="max-w-2xl">
             <span className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">{t.projects.eyebrow}</span>
             <h2 className="mt-3 font-display text-4xl font-bold sm:text-5xl">
-              {language === 'tr' ? (
-                <>
-                  Oynanan, sevilen, <span className="text-gradient">indirilen</span> işler
-                </>
-              ) : (
-                <>
-                  Played, loved, <span className="text-gradient">downloaded</span> products
-                </>
-              )}
+              {t.projects.title}
             </h2>
           </motion.div>
           <div className="flex flex-wrap gap-2">
@@ -33,13 +25,13 @@ export function ProjectsSection() {
               {language === 'tr' ? 'Tümünü gör' : 'View all'}
               <ArrowUpRightIcon />
             </Link>
-            <a href="#contact" className="glass inline-flex min-h-11 items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium hover:bg-white/15">
-              {language === 'tr' ? 'Proje konuşalım' : 'Start a project'} <ArrowUpRightIcon />
+            <a href="https://play.google.com/store/apps/dev?id=8686892676723770635" target="_blank" rel="noopener noreferrer" className="glass inline-flex min-h-11 items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium hover:bg-white/15">
+              Google Play <ArrowUpRightIcon />
             </a>
           </div>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4" style={{ perspective: 1000 }}>
+        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3" style={{ perspective: 1000 }}>
           {visibleProjects.map((project, index) => (
             <ProjectCard key={project.name} project={project} index={index} language={language} />
           ))}
@@ -79,43 +71,27 @@ export function ProjectCard({ project, index, language }: { project: (typeof pro
       style={{ rotateX: rx, rotateY: ry, transformPerspective: 800 }}
       className="group relative block overflow-hidden rounded-3xl shadow-card will-change-transform"
     >
-      <div className="aspect-[4/5] overflow-hidden">
-        <img src={project.image} alt={`${project.name} ${category}`} loading="lazy" width={768} height={768} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+      <div className="aspect-[1024/500] overflow-hidden">
+        <img src={project.image} alt={`${project.name} ${category}`} loading="lazy" width={1024} height={500} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
-      <div className="absolute inset-x-0 bottom-0 p-5">
+      <div className="relative bg-background/95 p-6">
         <span className="inline-block rounded-full px-3 py-1 text-xs font-semibold text-white" style={{ background: `color-mix(in oklab, var(--magenta) 30%, transparent)` }}>
-          {category}
+          {project.playUrl ? (language === 'tr' ? 'Google Play’de yayında' : 'Available on Google Play') : (language === 'tr' ? 'İncelemede' : 'Under review')}
         </span>
-        <h3 className="mt-2 font-display text-xl font-bold text-white drop-shadow-lg">{project.name}</h3>
-        <p className="mt-1 line-clamp-2 text-xs text-white/80">{description}</p>
-        <StoreBadges />
-      </div>
-      <div className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/15 opacity-0 backdrop-blur transition-opacity group-hover:opacity-100">
-        <ArrowUpRightIcon />
+        <div className="mt-4 flex items-center gap-3">
+          <img src={project.icon} alt="" width={56} height={56} loading="lazy" className="h-14 w-14 rounded-2xl object-cover" />
+          <h3 className="font-display text-2xl font-bold text-white">{project.name}</h3>
+        </div>
+        <p className="mt-4 min-h-20 text-sm leading-6 text-white/80">{description}</p>
+        {project.playUrl ? (
+          <a href={project.playUrl} target="_blank" rel="noopener noreferrer" aria-label={`${project.name} — Google Play`} className="mt-5 inline-flex min-h-12 items-center gap-3 rounded-xl bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-white/90">
+            <GooglePlayIcon /> {language === 'tr' ? 'Google Play’de oyna' : 'Play on Google Play'} <ArrowUpRightIcon />
+          </a>
+        ) : (
+          <p className="mt-5 inline-flex min-h-12 items-center rounded-xl bg-white/5 px-5 py-3 text-sm text-white/65">{language === 'tr' ? 'Yakında Google Play’de' : 'Coming to Google Play'}</p>
+        )}
       </div>
     </motion.article>
-  );
-}
-
-function StoreBadges() {
-  return (
-    <div className="mt-3 flex gap-2">
-      <a href="#" aria-label="App Store" className="flex items-center gap-1.5 rounded-lg bg-black/80 px-2.5 py-1.5 text-white ring-1 ring-white/15 backdrop-blur transition-transform hover:scale-105">
-        <AppleIcon />
-        <span className="text-left leading-tight">
-          <span className="block text-[8px] opacity-70">Download on the</span>
-          <span className="block text-[10px] font-semibold">App Store</span>
-        </span>
-      </a>
-      <a href="#" aria-label="Google Play" className="flex items-center gap-1.5 rounded-lg bg-black/80 px-2.5 py-1.5 text-white ring-1 ring-white/15 backdrop-blur transition-transform hover:scale-105">
-        <GooglePlayIcon />
-        <span className="text-left leading-tight">
-          <span className="block text-[8px] opacity-70">GET IT ON</span>
-          <span className="block text-[10px] font-semibold">Google Play</span>
-        </span>
-      </a>
-    </div>
   );
 }
 

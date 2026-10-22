@@ -15,7 +15,7 @@ export function Hero() {
   const heroTitle =
     language === 'tr'
       ? ['Mobil oyunlar', 'hayal gücünden', 'doğar.']
-      : ['Mobile products', 'begin with', 'imagination.'];
+      : ['Mobile games', 'begin with', 'imagination.'];
 
   return (
     <section id="home" className="relative isolate min-h-[100svh] scroll-mt-28 overflow-hidden pb-16 pt-28 sm:pb-24 sm:pt-32">
@@ -46,10 +46,10 @@ export function Hero() {
               {t.hero.primary}
               <ArrowRightIcon />
             </Link>
-            <Link href="#about" className="glass inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 py-3.5 font-semibold text-foreground transition-colors hover:bg-white/15 focus:outline-none focus:ring-4 focus:ring-white/20">
+            <a href="https://play.google.com/store/apps/dev?id=8686892676723770635" target="_blank" rel="noopener noreferrer" className="glass inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 py-3.5 font-semibold text-foreground transition-colors hover:bg-white/15 focus:outline-none focus:ring-4 focus:ring-white/20">
               <PlayIcon />
               {t.hero.secondary}
-            </Link>
+            </a>
           </div>
 
           <a href="#services" aria-label={t.hero.scrollHint} className="glass mt-7 inline-flex max-w-full items-center gap-3 rounded-full px-4 py-2 text-xs font-bold text-foreground/75 transition hover:bg-white/15 hover:text-foreground">
